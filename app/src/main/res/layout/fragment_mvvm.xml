@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class=".MvvmFragmentBinding">
+        <!--  指定ViewModel  -->
+        <variable
+            name="user"
+            type="com.yxd.knowledge.designpattern.mvvm.User" />
+        <!--  导入类  -->
+        <import type="android.view.View"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{user.name}"
+            android:visibility="@{user.hide? View.INVISIBLE : View.VISIBLE}"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{user.pwd}"/>
+        <Button
+            android:id="@+id/btnChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="变换"
+            />
+        <Button
+            android:id="@+id/btnChangeVisibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示异常"
+            />
+    </LinearLayout>
+</layout>

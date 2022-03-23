@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btnTest2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FixedThreadPool"/>
+
+    <Button
+        android:id="@+id/btnTest3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CachedThreadPool"/>
+
+    <Button
+        android:id="@+id/btnTest4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScheduledThreadPoolExecutor1"/>
+
+    <Button
+        android:id="@+id/btnTest5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScheduledThreadPoolExecutor2"/>
+
+    <Button
+        android:id="@+id/btnTest6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScheduledThreadPoolExecutor3"/>
+
+    <Button
+        android:id="@+id/btnTest7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SingleThreadExecutor"/>
+</LinearLayout>

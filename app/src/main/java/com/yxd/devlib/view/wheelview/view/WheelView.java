@@ -16,14 +16,14 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.yp.volvo.R;
-import com.yp.volvo.wheelview.adapter.WheelAdapter;
-import com.yp.volvo.wheelview.interfaces.IPickerViewData;
-import com.yp.volvo.wheelview.listener.LoopViewGestureListener;
-import com.yp.volvo.wheelview.listener.OnItemSelectedListener;
-import com.yp.volvo.wheelview.timer.InertiaTimerTask;
-import com.yp.volvo.wheelview.timer.MessageHandler;
-import com.yp.volvo.wheelview.timer.SmoothScrollTimerTask;
+import com.yxd.R;
+import com.yxd.devlib.view.wheelview.adapter.WheelAdapter;
+import com.yxd.devlib.view.wheelview.interfaces.IPickerViewData;
+import com.yxd.devlib.view.wheelview.listener.LoopViewGestureListener;
+import com.yxd.devlib.view.wheelview.listener.OnItemSelectedListener;
+import com.yxd.devlib.view.wheelview.timer.InertiaTimerTask;
+import com.yxd.devlib.view.wheelview.timer.MessageHandler;
+import com.yxd.devlib.view.wheelview.timer.SmoothScrollTimerTask;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -192,7 +192,7 @@ public class WheelView extends View {
     public WheelView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        textSize = getResources().getDimensionPixelSize(R.dimen.pickerview_textsize);//默认大小
+        textSize = 40;//todo getResources().getDimensionPixelSize(R.dimen.pickerview_textsize);//默认大小
 
         DisplayMetrics dm = getResources().getDisplayMetrics();
         // 屏幕密度比（0.75/1.0/1.5/2.0/3.0）
@@ -257,7 +257,7 @@ public class WheelView extends View {
         paintCenterText = new Paint();
         paintCenterText.setColor(textColorCenter);
         paintCenterText.setAntiAlias(true);
-        paintCenterText.setTextScaleX(1.1F);
+        paintCenterText.setTextScaleX(1.0F);
         paintCenterText.setTypeface(typeface);
         paintCenterText.setTextSize(textSize);
 
@@ -631,7 +631,7 @@ public class WheelView extends View {
                     canvas.restore();
                 } else if (translateY >= firstLineY && maxTextHeight + translateY <= secondLineY) {
                     // 中间条目
-                    // canvas.clipRect(0, 0, measuredWidth, maxTextHeight);
+                     canvas.clipRect(0, 0, measuredWidth, maxTextHeight);
                     //让文字居中
                     float Y = maxTextHeight - CENTER_CONTENT_OFFSET;//因为圆弧角换算的向下取值，导致角度稍微有点偏差，加上画笔的基线会偏上，因此需要偏移量修正一下
                     canvas.drawText(contentText, drawCenterContentStart, Y, paintCenterText);

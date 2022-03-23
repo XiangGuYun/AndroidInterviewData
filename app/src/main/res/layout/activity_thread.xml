@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取线程的状态"/>
+    <Button
+        android:id="@+id/btnTest1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="中断线程"/>
+
+   <fragment
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:name="com.yxd.devlib.interview.thread.other.ThreadPoolFragment"
+       android:tag="ThreadPool"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.yxd.devlib.interview.thread.other.VolatileFragment"
+        android:tag="Volatile"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.yxd.devlib.interview.thread.other.ThreadStateFragment"
+        android:tag="ThreadState"/>
+
+</LinearLayout>

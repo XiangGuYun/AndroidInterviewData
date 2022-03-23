@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <!--
+        在data标签写一个属性标签<variable>
+        name属性是变量名称,type是变量类型,可以是自己定义的类
+        -->
+        <variable
+            name="textName"
+            type="String" />
+        <variable
+            name="btnClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="presenter"
+            type="com.yxd.devlib.code.databinding.DataBindingActivity.Presenter" />
+        <!--   通过Copy Reference来获取全类名     -->
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".code.databinding.DataBindingActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTest"
+            android:text="@{textName}"/>
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{btnClick}"
+            android:text="测试"/>
+
+        <EditText
+            android:id="@+id/etTest"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onTextChanged="@{presenter.onTextChanged}"/>
+
+
+        <Button
+            android:id="@+id/btnTest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->presenter.clickButton(textName)}"
+            android:text="测试"/>
+
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,33 @@
+### 如何动态添加Fragment？
+```kotlin
+val homeFragment = HomeFragment()
+// 开启事务
+val fragmentTransaction = supportFragmentManager.beginTransaction()
+// 将Fragment添加到Activity的布局中
+fragmentTransaction.add(R.id.cl_fragment, homeFragment)
+// 提交事务
+fragmentTransaction.commit()
+```
+
+### 如何移除Fragment？
+```kotlin
+val fragmentTransaction = supportFragmentManager.beginTransaction()
+fragmentTransaction.remove(homeFragment)
+fragmentTransaction.commit()
+```
+
+### 如何替换Fragment？
+```kotlin
+val projectFragment = ProjectFragment()
+val fragmentTransaction = supportFragmentManager.beginTransaction()
+fragmentTransaction.replace(R.id.cl_fragment, projectFragment)
+fragmentTransaction.commit()
+```
+
+### 如何显示和隐藏Fragment？
+```kotlin
+val fragmentTransaction = supportFragmentManager.beginTransaction()
+fragmentTransaction.hide(homeFragment)
+// fragmentTransaction.show(homeFragment)
+fragmentTransaction.commit()
+```

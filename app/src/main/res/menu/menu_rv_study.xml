@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="ListView效果"
+        android:id="@+id/listView">
+        <menu>
+            <item
+                android:title="垂直标准"
+                android:id="@+id/czbz"/>
+            <item
+                android:title="横向标准"
+                android:id="@+id/hxbz"/>
+        </menu>
+    </item>
+    <item
+        android:title="GridView效果"
+        android:id="@+id/GridView"/>
+    <item
+        android:title="瀑布流效果"
+        android:id="@+id/staggerView"/>
+</menu>
