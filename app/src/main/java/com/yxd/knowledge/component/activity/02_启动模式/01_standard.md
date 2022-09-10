@@ -1,0 +1,5 @@
+# standard
+
+每启动一次Activity，就会创建一个新的Activity实例并置于栈顶。谁启动了这个Activity，那么这个Activity就运行在启动它的那个Activity所在的栈中。
+
+启动Activity时，Intent构造方法中的context是可以传Service的context或是application的context，但是必须要设置FLAG_ACTIVITY_NEW_TASK，表示创建一个新的栈来存放这个Activity。

@@ -25,20 +25,20 @@
             android:exported="true"></service>
 
         <activity
-            android:name=".knowledge.othercomponents.broadcast_receiver.TestBRActivity"
+            android:name="com.yxd.knowledge.component.broadcast_receiver.TestBRActivity"
             android:exported="false" />
         <activity
-            android:name=".knowledge.activity.intent.IntentDataTransportActivity"
+            android:name="com.yxd.knowledge.component.activity.codes.IntentDataTransportActivity"
             android:exported="false" />
         <activity
-            android:name=".knowledge.activity.lifecycle.CActivity"
+            android:name="com.yxd.knowledge.component.activity.codes.C"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
         <activity
-            android:name=".knowledge.activity.lifecycle.BActivity"
+            android:name="com.yxd.knowledge.component.activity.codes.BActivity"
             android:exported="false" />
         <activity
-            android:name=".knowledge.activity.lifecycle.AActivity"
+            android:name="com.yxd.knowledge.component.activity.codes.A"
             android:exported="false"
             android:launchMode="standard" />
         <activity
@@ -46,14 +46,14 @@
             android:exported="false" />
 
         <receiver
-            android:name=".knowledge.othercomponents.broadcast_receiver.StaticBroadcastR"
+            android:name="com.yxd.knowledge.component.broadcast_receiver.StaticBroadcastR"
             android:exported="true">
             <intent-filter>
                 <action android:name="static" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".knowledge.othercomponents.service.lifecycle.TestService" />
+        <service android:name="com.yxd.knowledge.component.service.TestService" />
 
         <activity
             android:name=".MainActivity"

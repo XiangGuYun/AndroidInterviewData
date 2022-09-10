@@ -2,6 +2,7 @@ package com.yxd
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.yxd.knowledge.ipc.aidl.MyService
@@ -12,20 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
-        supportFragmentManager.beginTransaction()
-            .add(R.id.flContainer, getFragment(), "test")
-            .commit()
 
-        startService(Intent(this, MyService::class.java))
+        val clickListener = object : View.OnClickListener
+        {
+            override fun onClick(v: View?) {
 
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        stopService(Intent(this, MyService::class.java))
-    }
-
-    private fun getFragment(): Fragment {
-        return OkHttpCustomInterceptor()
+            }
+        }
     }
 }
