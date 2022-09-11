@@ -13,10 +13,12 @@
         <entry key="app/src/main/res/layout/activity_inetent_data_transport.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26197916666666665" />
         <entry key="app/src/main/res/layout/activity_start_service.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_test_wblj.xml" value="0.24947916666666667" />
         <entry key="app/src/main/res/layout/activity_thread.xml" value="0.25" />
         <entry key="app/src/main/res/layout/city_name.xml" value="0.23177083333333334" />
         <entry key="app/src/main/res/layout/city_name_has_letter.xml" value="0.23177083333333334" />
         <entry key="app/src/main/res/layout/dialog_date_select1.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/frag_vp_wrap_rv.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/fragment_coroutines.xml" value="0.23489583333333333" />
         <entry key="app/src/main/res/layout/fragment_ll.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_mvvm.xml" value="0.2375" />
@@ -27,11 +29,15 @@
         <entry key="app/src/main/res/layout/item_index.xml" value="0.7199864705403647" />
         <entry key="app/src/main/res/layout/item_index_selected.xml" value="1.1533330281575522" />
         <entry key="app/src/main/res/layout/item_picture.xml" value="0.5327510917030568" />
+        <entry key="app/src/main/res/layout/item_rv_simple.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/item_test.xml" value="1.5892857142857142" />
+        <entry key="app/src/main/res/layout/item_test_vp_wrap_def_rv.xml" value="0.2375" />
+        <entry key="app/src/main/res/layout/item_test_vp_wrap_rv.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/item_upload.xml" value="0.5020576131687243" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/rv.xml" value="0.23177083333333334" />
         <entry key="app/src/main/res/menu/menu_rv_study.xml" value="0.23177083333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.182" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.11770833333333333" />
       </map>
     </option>
