@@ -8,16 +8,11 @@
     android:orientation="vertical"
     tools:context="com.yxd.MainActivity">
 
-    <Button
+    <fragment
+        android:id="@+id/fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="btn"
-        android:id="@+id/btnTest"/>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:id="@+id/flContainer"/>
+        android:layout_height="match_parent"
+        android:name="com.yxd.knowledge.ipc._03_messenger.code.MessengerClient"
+        android:tag="test"/>
 
 </LinearLayout>

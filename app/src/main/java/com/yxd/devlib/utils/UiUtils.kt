@@ -3,8 +3,52 @@ package com.yxd.devlib.utils
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
+import java.util.*
 
 object UiUtils {
+
+    fun getRandomColor(): Int {
+        val stringBuffer = StringBuffer();
+        stringBuffer.append("#");
+        for (i in 0 until 6){
+            stringBuffer.append(getRandomBeen());
+        }
+        return Color.parseColor(stringBuffer.toString())
+    }
+
+    /**
+     * 获取色值单元
+     *
+     * @return 单个色值单元值
+     */
+    private fun getRandomBeen(): String? {
+        var been = ""
+        val random = getRandom(16)
+        if (random > 9) {
+            when (random) {
+                10 -> been = "a"
+                11 -> been = "b"
+                12 -> been = "c"
+                13 -> been = "d"
+                14 -> been = "e"
+                15 -> been = "f"
+            }
+        } else {
+            been = random.toString()
+        }
+        return been
+    }
+
+    /**
+     * 获取随机整形数字
+     *
+     * @return 随机数
+     */
+    private fun getRandom(range: Int): Int {
+        val random = Random()
+        return random.nextInt(range)
+    }
+
     @JvmStatic
     fun px2dip(context: Context, pxValue: Number): Int {
         val scale = context.resources.displayMetrics.density

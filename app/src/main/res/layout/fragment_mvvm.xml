@@ -5,7 +5,7 @@
         <!--  指定ViewModel  -->
         <variable
             name="user"
-            type="com.yxd.knowledge.designpattern.mvvm.User" />
+            type="com.yxd.knowledge.design.mvvm.User" />
         <!--  导入类  -->
         <import type="android.view.View"/>
 

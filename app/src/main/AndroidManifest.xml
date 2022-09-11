@@ -19,26 +19,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DevLib"
         android:usesCleartextTraffic="true">
-        <service
-            android:name=".knowledge.ipc.aidl.MyService"
-            android:enabled="true"
-            android:exported="true"></service>
 
         <activity
-            android:name="com.yxd.knowledge.component.broadcast_receiver.TestBRActivity"
+            android:name=".knowledge.component.broadcast_receiver.TestBRActivity"
             android:exported="false" />
         <activity
-            android:name="com.yxd.knowledge.component.activity.codes.IntentDataTransportActivity"
+            android:name=".knowledge.component.activity.codes.IntentDataTransportActivity"
             android:exported="false" />
         <activity
-            android:name="com.yxd.knowledge.component.activity.codes.C"
+            android:name=".knowledge.component.activity.codes.C"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
         <activity
-            android:name="com.yxd.knowledge.component.activity.codes.BActivity"
+            android:name=".knowledge.component.activity.codes.BActivity"
             android:exported="false" />
         <activity
-            android:name="com.yxd.knowledge.component.activity.codes.A"
+            android:name=".knowledge.component.activity.codes.A"
             android:exported="false"
             android:launchMode="standard" />
         <activity
@@ -46,14 +42,14 @@
             android:exported="false" />
 
         <receiver
-            android:name="com.yxd.knowledge.component.broadcast_receiver.StaticBroadcastR"
+            android:name=".knowledge.component.broadcast_receiver.StaticBroadcastR"
             android:exported="true">
             <intent-filter>
                 <action android:name="static" />
             </intent-filter>
         </receiver>
 
-        <service android:name="com.yxd.knowledge.component.service.TestService" />
+        <service android:name=".knowledge.component.service.TestService" />
 
         <activity
             android:name=".MainActivity"
@@ -64,6 +60,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <service android:name=".knowledge.ipc._01_aidl.code.AidlService"
+            android:process=":test"/>
+
+        <service android:name=".knowledge.ipc._03_messenger.code.MessengerService"
+            android:process=":test"/>
     </application>
 
 </manifest>

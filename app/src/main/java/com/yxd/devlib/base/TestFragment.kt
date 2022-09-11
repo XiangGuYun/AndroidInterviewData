@@ -1,11 +1,13 @@
 package com.yxd.devlib.base
 
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -56,6 +58,25 @@ abstract class TestFragment : Fragment() {
     ): TextView {
         val textView = TextView(requireContext())
         textView.text = defText
+        textView.layoutParams = LinearLayout.LayoutParams(
+            width,
+            height
+        )
+        fragmentView.addView(textView)
+        return textView
+    }
+
+    fun addEditText(
+        hint: String = "",
+        width: Int = ViewGroup.LayoutParams.MATCH_PARENT,
+        height: Int = ViewGroup.LayoutParams.WRAP_CONTENT,
+        isNumber: Boolean = false
+    ): EditText {
+        val textView = EditText(requireContext())
+        if(isNumber){
+            textView.inputType = InputType.TYPE_CLASS_NUMBER
+        }
+        textView.hint = hint
         textView.layoutParams = LinearLayout.LayoutParams(
             width,
             height
