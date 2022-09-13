@@ -1,4 +1,4 @@
-package com.yxd.knowledge.other.java基础
+package com.yxd.knowledge.javabase.code
 
 import java.lang.ref.PhantomReference
 import java.lang.ref.ReferenceQueue
