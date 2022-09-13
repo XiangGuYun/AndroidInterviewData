@@ -21,7 +21,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".knowledge.component.broadcast_receiver.TestBRActivity"
+            android:name=".knowledge.component.broadcast_receiver.code.TestBRActivity"
             android:exported="false" />
         <activity
             android:name=".knowledge.component.activity.codes.IntentDataTransportActivity"
@@ -42,14 +42,14 @@
             android:exported="false" />
 
         <receiver
-            android:name=".knowledge.component.broadcast_receiver.StaticBroadcastR"
+            android:name=".knowledge.component.broadcast_receiver.code.StaticBroadcastR"
             android:exported="true">
             <intent-filter>
                 <action android:name="static" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".knowledge.component.service.TestService" />
+        <service android:name=".knowledge.component.service.code.TestService" />
 
         <activity
             android:name=".MainActivity"
