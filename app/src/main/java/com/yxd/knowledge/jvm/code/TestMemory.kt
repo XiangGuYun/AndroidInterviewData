@@ -1,4 +1,4 @@
-package com.yxd.knowledge.jvm.面试题.code
+package com.yxd.knowledge.jvm.code
 
 object TestMemory {
     @JvmStatic
