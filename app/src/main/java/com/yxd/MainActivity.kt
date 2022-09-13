@@ -10,6 +10,8 @@ import android.os.Looper
 import android.os.MessageQueue
 import android.util.Log
 import android.view.View
+import android.widget.ListAdapter
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -27,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
         doCheckPermissions()
-
     }
 
     private fun doCheckPermissions() {
