@@ -1,0 +1,76 @@
+# ARouter
+
+## 简介
+在组件化项目中，除了使用跨组件跳转库ActivityRouter，还可以使用阿里巴巴的开源路由项目：ARouter；
+
+1. ActivityRouter和ARouter的接入组件化项目的方式是一样的。
+2. ActivityRouter提供的功能目前ARouter也全部支持。
+3. ARouter还支持依赖注入解耦，页面、拦截器、服务等组件均会自动注册到框架。
+
+## 基础使用
+1. 在“app壳工程”中的应用Application中加入下面的代码：
+  ```java
+  if (BuildConfig.DEBUG) {
+    //一定要在ARouter.init之前调用openDebug
+    ARouter.openDebug();
+    ARouter.openLog();
+  }
+
+  ARouter.init(this);
+  ```
+2. 在 Common 组件中的 build.gradle 将ARouter 依赖进来：
+  ```
+  dependencies {
+    //router
+    compile 'com.alibaba:arouter-api:1.2.1.1'
+  }
+  ```
+3. 在每一个业务组件的 build.gradle 都引入ARouter 的 Annotation处理器：
+```groovy
+android {
+  defaultConfig {
+    ...
+    javaCompileOptions {
+      annotationProcessorOptions {
+        arguments = [ moduleName : project.getName() ]
+      }
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  annotationProcessor 'com.alibaba:aroutercompiler:1.0.3'
+}
+```
+4. ARouter支持自动注册到框架，不用像ActivityRouter那样在各个组件中声明组件，更不需要在Application中管理组件了。
+```
+// 给GirlsActivity添加注解@Route(path =“/girls/list”)
+// 注意：这里的路径至少需要有两级，是因为ARouter使用了路径中第一段字符串(/*/)作为分组。
+@Route(path = "/girls/list")
+public class GirlsActivity extends BaseActionBarActivity
+{
+  private GirlsView mView;
+  
+  private GirlsContract.Presenter mPresenter;
+  
+  @Override
+  protected int setTitleId() {
+    return R.string.girls_activity_title;
+  }
+  
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    mView = new GirlsView(this);
+    setContentView(mView);
+    mPresenter = new GirlsPresenter(mView);
+    mPresenter.start();
+  }
+  
+}
+```
+可以在项目中的任何一个地方通过URL地址：/girls/list, 调用GirlsActivity
+```java
+ARouter.getInstance().build("/girls/list").navigation();
+```
