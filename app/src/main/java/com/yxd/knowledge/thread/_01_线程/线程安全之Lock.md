@@ -1,5 +1,10 @@
 # 线程安全之Lock
 
+1. ReentrantLock重入锁
+2. 公平锁和非公平锁
+3. 读写锁
+4. 死锁
+
 ## ReentrantLock
 
 Lock在JDK5加入，结构更灵活，功能更强大，性能更优越。
