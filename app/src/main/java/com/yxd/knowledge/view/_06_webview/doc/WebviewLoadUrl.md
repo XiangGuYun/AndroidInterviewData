@@ -1,6 +1,6 @@
 # 演示WebView的loadUrl()
 
-点击按钮，即调用WebView JS（文本名为javascript）中callJS()。
+点击按钮，调用src/main/assets/文件名.html中的方法callJS()。
 
 ## 步骤1：将JS代码以.html格式放到src/main/assets文件夹中
 
