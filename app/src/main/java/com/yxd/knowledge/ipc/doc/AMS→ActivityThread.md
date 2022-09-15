@@ -4,6 +4,10 @@
 
 2. ApplicationThread和ATP都实现了接口IApplicationThread。
 
-
+>关于Activity是如何被启动的，可以参考：
+>
+>AMS→ApplicationThread
+>
+>ApplicationThread→Activity
 
  

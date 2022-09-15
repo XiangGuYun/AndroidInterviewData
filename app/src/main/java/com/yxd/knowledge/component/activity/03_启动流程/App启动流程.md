@@ -103,21 +103,18 @@ App进程&Zygote进程：Socket。
 
 🤔： "员工"Activity调用startActivity后，"董事会"AMS是如何收到消息的？
 
-[ActivityThread→AMS](doc/ActivityThread→AMS.md)
+[ActivityThread→AMS](../../../ipc/doc/ActivityThread→AMS.md)
 
 
 ## AMS向ActivityThread通信
 
 🤔：AMS接收到客户端的请求之后，会如何开启一个Activity?
 
-[AMS→ActivityThread](doc/AMS→ActivityThread.md)
+[AMS→ActivityThread](../../../ipc/doc/AMS→ActivityThread.md)
 
 
 <br>
 
-<br>
-
-<br>
 
 ## 总结
 
@@ -129,6 +126,6 @@ App进程&Zygote进程：Socket。
 6. App进程的binder线程（ApplicationThread）在收到请求后，通过handler向主线程发送LAUNCH_ACTIVITY消息；
 7. 主线程在收到Message后，通过发射机制创建目标Activity，并回调Activity.onCreate()等方法。
 
-![](img/af45dd12.png)
+![](../../../ipc/img/af45dd12.png)
 
 到此，App便正式启动，开始进入Activity生命周期，执行完onCreate/onStart/onResume方法
