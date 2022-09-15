@@ -6,6 +6,7 @@
 
 1. 在Linux中，所有进程都是由init进程（开机后由Linux内核启动）直接或间接fork（分岔）出来的。
 2. Zygote进程由init进程fork出来，所有app的进程都是由zygote进程fork出来。
+> Zygote：读作"赛狗特"。
 
 <br>
 
