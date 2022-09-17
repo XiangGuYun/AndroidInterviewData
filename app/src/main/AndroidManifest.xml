@@ -19,7 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DevLib"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".knowledge.sourcecode.glide.code.LifecycleActivity"
+            android:exported="false" />
         <activity
             android:name=".knowledge.component.broadcast_receiver.code.TestBRActivity"
             android:exported="false" />
@@ -61,12 +63,12 @@
             </intent-filter>
         </activity>
 
-
-        <service android:name=".knowledge.ipc._01_aidl.code.AidlService"
-            android:process=":test"/>
-
-        <service android:name=".knowledge.ipc._03_messenger.code.MessengerService"
-            android:process=":test"/>
+        <service
+            android:name=".knowledge.ipc._01_aidl.code.AidlService"
+            android:process=":test" />
+        <service
+            android:name=".knowledge.ipc._03_messenger.code.MessengerService"
+            android:process=":test" />
     </application>
 
 </manifest>

@@ -29,3 +29,7 @@ edit.apply(); // 或者edit.commit();
 // 从SP中读取value对应的值
 sp.getString("value","");
 ```
+
+### SP与其它方案比较
+
+![](img/36a284ad.png)

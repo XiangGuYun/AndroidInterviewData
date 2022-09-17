@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="testTag"
+    android:id="@+id/llParent"
+    android:orientation="vertical"
+    tools:context="com.yxd.MainActivity">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.yxd.knowledge.sourcecode.glide.code.LifeCycleFragment"
+        android:tag="test"/>
+
+</LinearLayout>

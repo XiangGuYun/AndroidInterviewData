@@ -6,13 +6,21 @@
     android:layout_height="match_parent"
     android:tag="testTag"
     android:orientation="vertical"
+    android:id="@+id/llParent"
     tools:context="com.yxd.MainActivity">
 
-    <fragment
-        android:id="@+id/fragment"
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.yxd.knowledge.ipc._03_messenger.code.MessengerClient"
-        android:tag="test"/>
+        android:layout_height="wrap_content"
+        android:text="测试"
+        android:visibility="gone"
+        android:id="@+id/btnTest"/>
+
+<!--    <fragment-->
+<!--        android:id="@+id/fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:name="com.yxd.knowledge.sourcecode.glide.code.LifeCycleFragment"-->
+<!--        android:tag="test"/>-->
 
 </LinearLayout>

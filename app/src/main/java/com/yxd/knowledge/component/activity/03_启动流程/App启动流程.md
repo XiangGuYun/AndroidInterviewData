@@ -1,5 +1,7 @@
 # App启动流程
 
+![](img/893bca0d.png)
+
 <br>
 
 ## 关于Zygote(受精卵)进程
@@ -47,7 +49,7 @@
 
 APP进程&SystemService进程：Binder。
 
-App进程&Zygote进程：Socket。
+SystemService进程&Zygote进程：Socket。
 
 <br>
 
